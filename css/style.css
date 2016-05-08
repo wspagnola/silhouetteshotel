@@ -1,0 +1,167 @@
+.panel-default {
+    padding: 1em;
+    margin-top: .5em;
+    background-color: #fff;
+
+}
+#myCarousel {
+    margin-top:.5em;
+}
+
+.mb-container {
+    /*
+    http://stackoverflow.com/questions/4804581/css-expand-child-div-height-to-parents-height
+    second solultion
+    */
+    overflow: hidden;
+}
+
+.our-menubar {
+    text-align: center;
+    background-color: blue;
+    margin-right: .5%;
+    color: white;
+    padding: .5%;
+    border: 1px solid #00004d;
+    /*
+    http://stackoverflow.com/questions/4804581/css-expand-child-div-height-to-parents-height
+    second solultion
+    */
+    padding-bottom: 32768px; 
+    margin-bottom: -32768px; 
+    
+}
+.our-menubar span{
+    font-size: 200%;
+}
+.item img {
+    width: 80%;
+}
+.island_background{
+    background-color: #0fdbfe; /* color of the ocean in the pic */
+    background-image: url("../img/BahamasBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; 
+    background: cover;
+    background-attachment: fixed;
+    
+}
+nav {
+    margin-bottom: 1%;
+}
+.red_background{
+    background-color: red;
+}
+.onGreen {
+    color: #fffefe;
+}
+.onGreen:hover {
+    color: #eeeded;
+    text-decoration: none;
+}
+
+#first_name {
+    font-size: 32px;
+    font-style: italic;
+}
+.thank_you p{
+    text-align: center;
+}
+.thank_you b {
+     font-size: 24px;
+}
+/*
+@media only screen and (min-width: 768px) {
+    .navbar{
+        display: none;
+    }
+    
+}
+*/
+
+/*
+Robert's navbar stuff
+*/
+.navbar-brand {
+    height: 77px;
+    padding-top: 5px;
+}
+.navbar-nav > li > a {
+    padding-bottom: 18px;
+    padding-top: 19px;
+    font-size: 1.1em;
+}
+body.fixed-nb {
+    padding-top: 97px;
+}
+/*
+end of navbar stuff
+*/
+
+
+/*
+amenities
+*/
+
+.amenities {
+    font-family: 'Handlee', cursive;
+    font-weight: bold;
+    /* Robert added */
+    font-size: 2.5em;
+}
+
+.hotelamenities {
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: bold;
+}
+
+body.in-pool
+{
+   background-image: url("http://sampson.washcoll.edu/~kcudemo2/Final%20Project/images/blue-deep-ocean-water.jpg");
+    background-color: #cccccc;
+}
+#acc-pnl {
+    margin-top: 25px;
+}
+/*
+@media only screen and (max-width: 991px) {
+    #accommodations {
+        height: 77px; //menu shim 
+    }
+}
+*/
+
+
+/*Positions Blue Navbar at Top of Page 1 v2.1*/
+
+
+/*Hides Custom Navbar in Mobile Display*/
+@media only screen and (max-width:768px) {
+    
+    #our_nav{
+        display: none;
+    }
+}
+
+
+
+
+/*Hides Collapsible Navbar in Tablet and Computer Display*/
+
+@media only screen and (min-width: 768px) {
+    #hide{
+        display: none;
+    }
+    #our_nav{
+        position: absolute;
+        top: 0px;
+    }
+   
+}
+
+
+
+
+
+

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+        
+        
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        <!--CDN for Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+        <!-- Link to any custom css here -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <title>Silhouettes: The Honeymoon Hotel</title>
+    </head>
+    <body class="island_background">
+        <div class="container">
+            <div class="panel panel-default" id="form"> <!-- Robert's form -->
+                <div class="row">
+                     <div class="col-xs-12 thank_you">
+                        <p>Book a room at <b>Silhouettes: The Honeymoon Hotel.</b></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" >
+                        <form class="form-horizontal">
+                          <div class="form-group">
+                            <label for="firstName" class="col-sm-4 control-label">First Name</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="firstName" placeholder="Mary">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="lastName" class="col-sm-4 control-label">Last Name</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="checkInDate" class="col-sm-4 control-label">Check In Date</label>
+                            <div class="col-sm-8">
+                              <input type="date" class="form-control" id="checkInDate" placeholder="12/27/2016">
+                            </div>
+                          </div>
+                           <div class="form-group">
+                            <label for="noNights" class="col-sm-4 control-label">Number of Nights</label>
+                            <div class="col-sm-8">
+                              <input type="text" class="form-control" id="noNights" placeholder="3">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-8">
+                                <label class="radio-inline">
+                                  <input type="radio" name="inlineRadioOptions" id="suite" value="suite" checked>Suite
+                                </label>
+                                <label class="radio-inline">
+                                  <input type="radio" name="inlineRadioOptions" id="bungalow" value="bungalow">Bungalow
+                                </label>
+                            </div>
+                          </div> 
+                          <div class="form-group">
+                            <div class="col-sm-offset-4 col-sm-8">
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="processForm()">Book it!</button>
+                              <!-- onclick="processForm()" -->
+                            </div>
+                          </div>
+                        </form>
+                    </div> <!--col-->
+                </div><!--row-->
+            </div> <!-- end of Robert's form panel-->
+        </div> <!-- end of container -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Thank you, <span id="first_name"></span> for booking a room at <b><br>Silhouettes: The Honeymoon Hotel.</b></h4>
+      </div>
+      <div class="modal-body">
+        <!--Reservation Details-->
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1 reservation">
+                
+                <!--Name-->
+                <div class= "row">
+                    <div class= "col-xs-6">
+                        Name:
+                    </div>
+                    <div class ="col-xs-6">
+                        <span id="last_name"></span>
+                    </div>
+                </div>
+                
+                <!--Check in Date-->
+                <div class= "row">
+                    <div class="col-xs-6">
+                        Check In:
+                    </div>
+                    <div class="col-xs-6">
+                        <span id="check_in"></span>
+                    </div>
+                </div>
+                
+                <!--Length of Stay-->
+                <div class="row">
+                    <div class="col-xs-6">
+                        Number of Nights:
+                    </div>
+                    <div class="col-xs-6">
+                        <span id="stay_length"></span>
+                    </div>
+                </div>
+    
+                <!--Room Type-->
+                <div class="row">
+                    <div class="col-xs-6">
+                        Room Type:
+                    </div>
+                    <div class="col-xs-6">
+                        <span id="room_type"></span>
+                    </div>
+                </div>
+                
+                <!--Amount Due Upon Check In-->
+                <div class="row">
+                    <div class="col-xs-6">
+                        Amount Due:
+                    </div>
+                    <div class="col-xs-6">
+                        <span id="total_bill"></span>
+                    </div>
+                    
+                </div>
+            </div> <!-- /col -->
+            <!--reservation details -->
+        </div> <!-- /row -->
+      </div> <!-- /modal-body -->
+    </div> <!-- /modal-content -->
+  </div><!-- /modal-dialog -->
+</div> <!-- /modal -->
+    
+       
+        <!--jQuery Library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        
+        <!--Latest Compiled JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+  
+        <!-- local external script -->
+        <script src="js/script.js"></script>
+    <script>
+    // script moved to js/script.js
+    </script>
+    </body>
+</html>

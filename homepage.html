@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home Page</title>
+        
+        <!--Meta Tags-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!--Boostrap Links-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        
+        <!--Link to Our CSS Stylesheet-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        
+        <!--jQuery CDN-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <!--Link to Our JavaScript-->
+        <script type="text/javascript" src="js/script.js"></script>
+        
+        
+    </head>
+    <body class="island_background">
+        <div class="container-fluid">
+            
+            <!--Navigation Bar-->
+    
+                <div class="row mb-container" >
+                    <!--Logo-->
+                    <div class="col-sm-3 col-xs-12">
+                       <img src="img/logo.jpg" class="img-responsive"/>
+                    </div>
+                    <a href="index.html">
+                    <div class="col-sm-2 col-xs-12 our-menubar" id="info">
+                        <span class="glyphicon glyphicon-home"></span>
+                        <p>Home</p>
+                    </div>
+                    </a>
+                    <a href="amenities.html#accommodations">
+                     <div class="col-sm-2 col-xs-12 our-menubar">
+                        <span class="glyphicon glyphicon-bed"></span>
+                        <p>Accommodations</p>
+                    </div>
+                    </a>
+                    <a href="amenities.html">
+                        <div class="col-sm-2 col-xs-12 our-menubar">
+                            <span class="glyphicon glyphicon-glass"></span>
+                            <p>Amenities</p>
+                        </div>
+                    </a>
+                    <a href="contact.html">
+                        <div class="col-sm-2 col-xs-12 our-menubar">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                            <p>Contact Us</p>
+                        </div>
+                    </a>
+                </div> <!-- /mb-container -->   
+        
+            
+            <div class="row"> <!-- contains sidebar and carousel -->
+                <!--Side Bar-->
+                <div class="col-sm-3 ourSideBar">
+                    <div class="panel panel-default" id="form"> <!-- Robert's form -->
+                        <div class="row">
+                             <div class="col-xs-12 thank_you">
+                                <h2>Book a Room</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" >
+                                <form>
+                                  <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Mary">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="checkInDate">Check In Date</label>
+                                      <input type="date" class="form-control" id="checkInDate" placeholder="12/27/2016">
+                                  </div>
+                                   <div class="form-group">
+                                    <label for="noNights">Number of Nights</label>
+                                      <input type="text" class="form-control" id="noNights" placeholder="3">
+                                  </div>
+                                  <div class="form-group">
+                                        <label class="radio-inline">
+                                          <input type="radio" name="inlineRadioOptions" id="suite" value="suite" checked>Suite
+                                        </label>
+                                        <label class="radio-inline">
+                                          <input type="radio" name="inlineRadioOptions" id="bungalow" value="bungalow">Bungalow
+                                        </label>
+                                    </div>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
+                                    onclick="processForm()">Book it!</button>
+                                </form>
+                            </div> <!--col-->
+                        </div><!--row-->
+                    </div> <!-- end of Robert's form panel-->
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Thank you, <span class="first_name"></span> for booking a room at <b>Silhouettes: The Honeymoon Hotel.</b></h4>
+                          </div>
+                          <div class="modal-body">
+                            <!--Reservation Details-->
+                            <div class="row">
+                                <div class="col-xs-10 col-xs-offset-1 reservation">
+                                    
+                                    <!--Name-->
+                                    <div class= "row">
+                                        <div class= "col-xs-6 text-right">
+                                            Name:
+                                        </div>
+                                        <div class ="col-xs-6">
+                                            <span class="first_name"></span> </span><span id="last_name"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!--Check in Date-->
+                                    <div class= "row">
+                                        <div class="col-xs-6 text-right">
+                                            Check In:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span id="check_in"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!--Length of Stay-->
+                                    <div class="row">
+                                        <div class="col-xs-6 text-right">
+                                            Number of Nights:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span id="stay_length"></span>
+                                        </div>
+                                    </div>
+                        
+                                    <!--Room Type-->
+                                    <div class="row">
+                                        <div class="col-xs-6 text-right">
+                                            Room Type:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span id="room_type"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!--Amount Due Upon Check In-->
+                                    <div class="row">
+                                        <div class="col-xs-6 text-right">
+                                            Amount Due:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span id="total_bill"></span>
+                                        </div>
+                                        
+                                    </div>
+                                </div> <!-- /col -->
+                                <!--reservation details -->
+                            </div> <!-- /row -->
+                          </div> <!-- /modal-body -->
+                        </div> <!-- /modal-content -->
+                      </div><!-- /modal-dialog -->
+                    </div> <!-- /modal -->
+                    
+                </div> <!-- /sidebar -->
+                
+                <!--Carousel-->
+                <div id="myCarousel" class="carousel slide col-sm-8" data-ride="carousel">
+                    
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                    
+                    <!--Wrapper for slides-->
+                    <div class="carousel-inner" role="listbox">
+                        <!--Suite Image-->
+                        <div class="item active">
+                            <img src="img/suite.jpg" class="img-responsive center-block"/>
+                            <div class="carousel-caption">
+                                <p>Suite</p>
+                            </div>
+                        </div>
+                        <!--Bungalow Image-->
+                        <div class="item">
+                            <img src="img/bungalow.jpg" class="img-responsive center-block"/>
+                            <div class="carousel-caption">
+                                <p>Bungalow</p>
+                            </div>
+                        </div>
+                        <!-- ... -->
+                    </div>
+                    
+                    <!--Controls-->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div> <!-- /carousel -->
+            </div> <!-- /containing row -->
+            <div class="panel panel-default">
+              Site by Countee Cullen hotel team: Erma, Robert, Verona and William &copy 2016 NYPL
+            </div>
+
+        </div> <!-- /container-fluid -->
+
+        
+        <!--jQuery Library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            
+         <!--Latest compiled JavaScript-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </body>
+</html>

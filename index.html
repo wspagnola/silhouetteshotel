@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home Page</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+
+    <!-- Link to any custom css here -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="island_background fixed-nb">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+            <img alt="Silhouettes: the Honeymoon Hotel" src="img/logo.png">
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav text-center">
+            <li class="active"><a href="index.html">
+              <span class="glyphicon glyphicon-home"></span>
+              <br>Home
+            </a></li>
+            <li><a href="amenities.html#accommodations">
+              <span class="glyphicon glyphicon-bed"></span>
+              <br>Accommodations
+            </a></li>
+            <li><a href="amenities.html">
+              <span class="glyphicon glyphicon-glass"></span>
+              <br>Amenities
+            </a></li>
+            <li><a href="contact.html">
+              <span class="glyphicon glyphicon-envelope"></span>
+              <br>Contact Us            
+            </a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+            <div class="row"> <!-- contains sidebar and carousel -->
+                
+                <!--Carousel-->
+                <div id="myCarousel" class="carousel slide col-sm-8 col-sm-push-3" data-ride="carousel">
+                    
+                    <!--Indicators-->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                    </ol>
+                    
+                    <!--Wrapper for slides-->
+                    <div class="carousel-inner" role="listbox">
+                        <!--Suite Image-->
+                        <div class="item active">
+                            <img src="img/suite.jpg" class="img-responsive center-block"/>
+                            <div class="carousel-caption">
+                                <p>Suite</p>
+                            </div>
+                        </div>
+                        <!--Bungalow Image-->
+                        <div class="item">
+                            <img src="img/bungalow.jpg" class="img-responsive center-block"/>
+                            <div class="carousel-caption">
+                                <p>Bungalow</p>
+                            </div>
+                        </div>
+                        <!-- ... -->
+                    </div>
+                    
+                    <!--Controls-->
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div> <!-- /carousel -->
+                <!--Side Bar-->
+                <div class="col-sm-3 col-sm-pull-8 ourSideBar">
+                    <div class="panel panel-default" id="form"> <!-- Robert's form -->
+                        <div class="row">
+                             <div class="col-xs-12 thank_you">
+                                <h2>Book a Room</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12" >
+                                <form>
+                                  <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="Mary">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Doe">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="checkInDate">Check In Date</label>
+                                      <input type="date" class="form-control" id="checkInDate" placeholder="12/27/2016">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="noNights">Number of Nights</label>
+                                      <input type="text" class="form-control" id="noNights" placeholder="3">
+                                  </div>
+                                  <div class="form-group">
+                                        <label class="radio-inline">
+                                          <input type="radio" name="inlineRadioOptions" id="suite" value="suite" checked>Suite
+                                        </label>
+                                        <label class="radio-inline">
+                                          <input type="radio" name="inlineRadioOptions" id="bungalow" value="bungalow">Bungalow
+                                        </label>
+                                  </div>
+                                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" 
+                                    onclick="processForm()">Book it!</button>
+                                </form>
+                            </div> <!--col-->
+                        </div><!--row-->
+                    </div> <!-- end of Robert's form panel-->
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Thank you, <span class="first_name"></span> for booking a room at <b>Silhouettes: The Honeymoon Hotel.</b></h4>
+                          </div>
+                          <div class="modal-body">
+                            <!--Reservation Details-->
+                            <div class="row">
+                                <div class="col-xs-10 col-xs-offset-1 reservation">
+                                    
+                                    <!--Name-->
+                                    <div class= "row">
+                                        <div class= "col-xs-6 text-right">
+                                            Name:
+                                        </div>
+                                        <div class ="col-xs-6">
+                                            <span class="first_name"></span> </span><span id="last_name"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!--Check in Date-->
+                                    <div class= "row">
+                                        <div class="col-xs-6 text-right">
+                                            Check In:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span id="check_in"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!--Length of Stay-->
+                                    <div class="row">
+                                        <div class="col-xs-6 text-right">
+                                            Number of Nights:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span id="stay_length"></span>
+                                        </div>
+                                    </div>
+                        
+                                    <!--Room Type-->
+                                    <div class="row">
+                                        <div class="col-xs-6 text-right">
+                                            Room Type:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span id="room_type"></span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!--Amount Due Upon Check In-->
+                                    <div class="row">
+                                        <div class="col-xs-6 text-right">
+                                            Amount Due:
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span id="total_bill"></span>
+                                        </div>
+                                        
+                                    </div>
+                                </div> <!-- /col -->
+                                <!--reservation details -->
+                            </div> <!-- /row -->
+                          </div> <!-- /modal-body -->
+                        </div> <!-- /modal-content -->
+                      </div><!-- /modal-dialog -->
+                    </div> <!-- /modal -->
+                    
+                </div> <!-- /sidebar -->
+            </div> <!-- /containing row -->
+            <div class="panel panel-default">
+              Site by Countee Cullen hotel team: Erma, Robert, Verona and William &copy 2016 NYPL
+            </div>
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <!--Link to Our JavaScript-->
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
